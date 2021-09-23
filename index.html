@@ -6,13 +6,46 @@
   <title>AJAX Project</title>
   <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&family=Delius+Swash+Caps&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="top-header">
+    <h1 class="header1">Cat Pictures</h1>
+    <button class="entries-button">Entries</button>
   </header>
-  <main>
+  <main class="page1">
+    <div class="row entries-section">
+      <h2 class="header2">Entries</h2>
+      <button class="random-button">RANDOM</button>
+    </div>
+    <div class="container">
+      <p class="no-entries">No entries have been recorded</p>
+    </div>
+  </main>
+  <main class="page2 entries-section hidden">
+    <h2 class="header2">New Entry</h2>
+    <form>
+      <div class="row form-container">
+        <div class="column-half">
+          <img class="random-cat-image" src="" alt="random-cat-pic">
+        </div>
+        <div class="column-half title-photo">
+          <span class="inputfield text-overlay">Title</span>
+          <input type="text" id="title-input" class="inputfield text-input">
+          <span class="inputfield url-input-span text-overlay ">Photo URL</span>
+          <input disabled type="text" id="photo-input" class="inputfield text-input url-input">
+        </div>
+      </div>
+      <div class="column-full note-section">
+        <span class="inputfield text-overlay">Notes</span>
+        <textarea class="inputfield text-input" name="notes" id="notes-input" cols="30" rows="10"></textarea>
+      </div>
+      <button class="save-button">SAVE</button>
+    </form>
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
