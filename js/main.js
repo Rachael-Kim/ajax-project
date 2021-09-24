@@ -57,6 +57,7 @@ function renderDOM(){
     var notes = document.createElement('p');
     var image = document.createElement('img');
     image.setAttribute('src', entries[i].photoURL);
+    image.setAttribute('class', 'random-cat-image');
     notes.textContent = entries[i].notes;
     parentContainer.appendChild(title);
     parentContainer.appendChild(notes);

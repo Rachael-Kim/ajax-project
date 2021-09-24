@@ -20,6 +20,10 @@
   color: white;
 }
 
+.entries-button:hover {
+  color: black;
+}
+
 .entries-section {
   padding: 0 20px;
 }
@@ -41,6 +45,11 @@
   padding: 7px 20px;
 }
 
+.random-button:hover {
+  background-color: #E9B83C;
+  color: black;
+}
+
 .no-entries {
   font-family: 'Roboto', sans-serif;
   margin-top: 50px
@@ -49,7 +58,13 @@
 /* page 2 */
 
 .random-cat-image {
-  height: 300px;
+  height: 350px;
+  width: 400px;
+  border: 7px dashed black;
+}
+
+.random-cat-image:hover {
+  border: 7px dashed #e7893c;
 }
 
 .inputfield {
