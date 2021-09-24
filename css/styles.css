@@ -48,6 +48,10 @@
 
 /* page 2 */
 
+.random-cat-image {
+  height: 300px;
+}
+
 .inputfield {
   font-family: 'Cantarell', sans-serif;
 

@@ -11,6 +11,8 @@ var noEntries = document.querySelector('.no-entries');
 var entriesContainer = document.querySelector('.container');
 
 function catPicture () {
+  titleInput.value = '';
+  notesInput.value = '';
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://cataas.com/cat?json=true');
   xhr.reponseType = 'json';
@@ -31,7 +33,7 @@ function catPicture () {
 
 randomButton.addEventListener('click', catPicture);
 
-function savePicture(){
+function savePicture(event){
   event.preventDefault()
   entries.push({
     title: titleInput.value,
@@ -40,11 +42,15 @@ function savePicture(){
   });
   page2.classList.add('hidden');
   page1.classList.remove('hidden');
-  noEntries.classList.add('hidden');
+  renderDOM()
+}
 
-  entriesContainer = document.createElement('div');
+function renderDOM(){
+  var firstChild = entriesContainer.firstElementChild
+  entriesContainer.removeChild(firstChild);
+  var grandParentContainer = document.createElement('div');
 
-  for(let i = 0; i < entries.length; i++){
+  for (let i = entries.length - 1; i >= 0; i--) {
     var parentContainer = document.createElement('div');
     var title = document.createElement('h3');
     title.textContent = entries[i].title;
@@ -52,11 +58,12 @@ function savePicture(){
     var image = document.createElement('img');
     image.setAttribute('src', entries[i].photoURL);
     notes.textContent = entries[i].notes;
-    parentContainer.appendChild(image);
     parentContainer.appendChild(title);
     parentContainer.appendChild(notes);
-    entriesContainer.appendChild(parentContainer);
+    parentContainer.appendChild(image);
+    grandParentContainer.appendChild(parentContainer);
   }
+  entriesContainer.appendChild(grandParentContainer)
 }
 
 saveButton.addEventListener('click', savePicture);
