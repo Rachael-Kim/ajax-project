@@ -1,0 +1,92 @@
+.top-header {
+  background-color: #E9B83C;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header1{
+  font-family: 'Cantarell', sans-serif;
+  color: white
+}
+
+.entries-button {
+  height: 30px;
+  border: none;
+  background-color: #E9B83C;
+  font-family: 'Delius Swash Caps', cursive;
+  font-size: 1.25rem;
+  color: white;
+}
+
+.entries-section {
+  padding: 0 20px;
+}
+
+.page1 {
+  margin-top: 30px;
+}
+
+.header2 {
+  font-family: 'Delius Swash Caps', cursive;
+}
+
+.random-button {
+  font-family: 'Roboto', sans-serif;
+  background-color: #26A69A;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  padding: 7px 20px;
+}
+
+.no-entries {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 50px
+}
+
+/* page 2 */
+
+.inputfield {
+  font-family: 'Cantarell', sans-serif;
+
+}
+
+.text-overlay {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: fit-content;
+  background: white;
+}
+
+.title-photo {
+  width: 80%;
+  margin-left: 25px;
+}
+
+.text-input {
+   border: 1px solid lightgray;
+   border-radius: 6px;
+   padding: 5px;
+}
+
+.note-section {
+  margin-top: 75px;
+}
+
+.url-input-span {
+  margin-top: 25px;
+}
+
+.save-button {
+  font-family: 'Roboto', sans-serif;
+  background-color: #26A69A;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  padding: 6px 10px;
+  margin-top: 30px;
+  float: right;
+}
