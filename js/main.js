@@ -42,13 +42,15 @@ function savePicture(event){
   });
   page2.classList.add('hidden');
   page1.classList.remove('hidden');
-  // noEntries.classList.add('hidden');
-  console.log(entriesContainer.childNodes[0])
+  renderDOM()
+}
+
+function renderDOM(){
   var firstChild = entriesContainer.firstElementChild
   entriesContainer.removeChild(firstChild);
   var grandParentContainer = document.createElement('div');
 
-  for(let i = 0; i < entries.length; i++){
+  for (let i = entries.length - 1; i >= 0; i--) {
     var parentContainer = document.createElement('div');
     var title = document.createElement('h3');
     title.textContent = entries[i].title;
