@@ -34,6 +34,22 @@ body {
   flex-direction: column;
 }
 
+.parent-container {
+  display: flex;
+}
+
+.title-icon-div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 25px;
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+}
+
+.homepage-notes {
+  margin-left: 25px;
+  font-family: 'Roboto', sans-serif;
+}
 
 @media screen and (max-width: 568px) {
   .top-header {
@@ -54,4 +70,11 @@ body {
   .note-section {
     margin-top: 25px;
 }
+  .parent-container{
+    flex-direction: column;
+    margin: 0 20px;
+  }
+  .random-cat-image{
+    margin: auto;
+  }
 }
