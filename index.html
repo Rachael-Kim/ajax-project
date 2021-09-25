@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AJAX Project</title>
   <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -12,6 +16,7 @@
     href="https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&family=Delius+Swash+Caps&family=Roboto:wght@400;700&display=swap"
     rel="stylesheet">
 </head>
+
 <body>
   <header class="top-header">
     <h1 class="header1">Cat Pictures</h1>
@@ -47,7 +52,35 @@
       <button class="save-button">SAVE</button>
     </form>
   </main>
+  <main class="page3 hidden">
+    <div class="row">
+      <h2 class="header2 entries-section">Edit Entry</h2>
+      <button class="cancel-button">CANCEL</button>
+    </div>
+    <form>
+      <div class="row form-container">
+        <div class="column-half">
+          <img class="random-cat-edit" src="" alt="random-cat-pic">
+        </div>
+        <div class="column-half title-photo">
+          <span class="inputfield url-input-span text-overlay ">Title</span>
+          <input type="text" id="edit-title-input" class="inputfield text-input edit-title">
+          <span class="inputfield url-input-span text-overlay">Photo</span>
+          <input disabled type="text" id="edit-photo-input" class="inputfield text-input url-input edit-url">
+        </div>
+      </div>
+      <div class="column-full note-section">
+        <span class="inputfield url-input-span text-overlay">Notes</span>
+        <textarea class="inputfield text-input edit-notes" name="notes" id="edit-notes-input" cols="30" rows="10"></textarea>
+      </div>
+      <div class="button-container">
+        <button class="delete-button">DELETE</button>
+        <button class="save-button-edit">SAVE</button>
+      </div>
+    </form>
+  </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>
