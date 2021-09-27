@@ -7,21 +7,23 @@
 }
 
 .header1{
-  font-family: 'Cantarell', sans-serif;
-  color: white
+  font-family: 'Delius Swash Caps', cursive;
+  color: white;
 }
 
 .entries-button {
   height: 30px;
-  border: none;
+  border: 1px dashed black;
   background-color: #E9B83C;
   font-family: 'Delius Swash Caps', cursive;
   font-size: 1.25rem;
-  color: white;
+  color: black;
+  cursor: pointer;
 }
 
 .entries-button:hover {
-  color: black;
+  border: 1px dashed white;
+  color: white;
 }
 
 .entries-section {
@@ -45,7 +47,12 @@
   padding: 7px 20px;
 }
 
-.random-button:hover {
+.save-button:hover,
+.save-button-edit:hover,
+.random-button:hover,
+.modal-cancel-button:hover,
+.modal-confirm-button:hover,
+.delete-button:hover {
   background-color: #E9B83C;
   color: black;
 }
@@ -55,22 +62,21 @@
   margin-top: 50px
 }
 
-/* page 2 */
+/* New Entry */
 
 .random-cat-image {
   height: 350px;
   width: 400px;
-  border: 7px dashed black;
-  margin-bottom: 15px;
+  border: 5px dashed black;
+  margin: 10px 0 10px 20px;
 }
 
 .random-cat-image:hover {
-  border: 7px dashed #e7893c;
+  border: 7px dashed #E9B83C;
 }
 
 .inputfield {
   font-family: 'Cantarell', sans-serif;
-
 }
 
 .text-overlay {
@@ -110,23 +116,35 @@
   padding: 6px 10px;
   margin-top: 30px;
   float: right;
+  cursor: pointer;
 }
+
 
 .pen-icon {
   font-size: 2rem;
 }
 
-/* edit page */
+.pen-icon:hover {
+  color: rgb(202, 20, 20);
+}
+
+/* Edit page */
 
 .cancel-button {
-  border: none;
+  border: 1px solid red;
   background-color: white;
   font-family: 'Cantarell', sans-serif;
   margin-right: 25px;
   font-size: 1rem;
   color: red;
   font-weight: 800;
-  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  border: 2px solid black;
+  color: black;
+  background-color: tomato;
 }
 
 .button-container {
@@ -143,4 +161,66 @@
   padding: 6px 10px;
   margin-top: 30px;
   float: right;
+  cursor: pointer;
+}
+
+
+/* Modal */
+
+.modal-overlay {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  width: 450px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 35% auto;
+}
+
+.modal-content {
+  margin-top: 50px;
+}
+
+.modal-text {
+   font-family: 'Cantarell', sans-serif;
+   text-align: center;
+}
+
+
+.modal-button-container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.modal-confirm-button {
+  font-family: 'Roboto', sans-serif;
+  background-color:  tomato;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.modal-cancel-button {
+  font-family: 'Roboto', sans-serif;
+  background-color: #26A69A;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  padding: 6px 10px;
+  cursor: pointer;
 }

@@ -19,7 +19,7 @@
 
 <body>
   <header class="top-header">
-    <h1 class="header1">Cat Pictures</h1>
+    <h1 class="header1">Random Cat Pictures</h1>
     <button class="entries-button">Entries</button>
   </header>
   <main class="page1">
@@ -60,7 +60,7 @@
     <form>
       <div class="row form-container">
         <div class="column-half">
-          <img class="random-cat-edit" src="" alt="random-cat-pic">
+          <img class="random-cat-edit random-cat-image" src="" alt="random-cat-pic">
         </div>
         <div class="column-half title-photo">
           <span class="inputfield url-input-span text-overlay ">Title</span>
@@ -79,8 +79,18 @@
       </div>
     </form>
   </main>
+  <main class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-content">
+        <p class="modal-text">Are you sure you want to delete this entry?</p>
+        <div class="modal-button-container">
+          <button class="modal-cancel-button">CANCEL</button>
+          <button class="modal-confirm-button">CONFIRM</button>
+        </div>
+      </div>
+    </div>
+  </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
-
 </html>

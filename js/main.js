@@ -17,6 +17,10 @@ var editNotes = document.querySelector('.edit-notes');
 var editURL= document.querySelector('.edit-url');
 var saveButtonEdit = document.querySelector('.save-button-edit');
 var cancelButton = document.querySelector('.cancel-button');
+var modal = document.querySelector('.modal-overlay');
+var deleteButton = document.querySelector('.delete-button');
+var modalCancelButton = document.querySelector('.modal-cancel-button');
+var modalConfirmButton = document.querySelector('.modal-confirm-button');
 
 entriesButton.addEventListener('click', function(event){
   event.preventDefault();
@@ -121,14 +125,40 @@ saveButtonEdit.addEventListener('click', function(event){
   renderDOM();
 });
 
-entriesButton.addEventListener('click', function(){
+entriesButton.addEventListener('click', function(event){
   event.preventDefault()
   page2.classList.add('hidden');
   page1.classList.remove('hidden');
 });
 
-cancelButton.addEventListener('click', function(){
+
+cancelButton.addEventListener('click', function(event){
   event.preventDefault()
   page3.classList.add('hidden');
   page1.classList.remove('hidden');
+});
+
+// Modal
+
+deleteButton.addEventListener('click', function(event){
+  event.preventDefault();
+  modal.classList.remove('hidden');
+});
+
+modalCancelButton.addEventListener('click', function(){
+  event.preventDefault();
+  modal.classList.add('hidden');
+});
+
+modalConfirmButton.addEventListener('click', function(event){
+  event.preventDefault();
+  for (let i = 0; i < entries.length; i++){
+    if (entries[i].photoURL === editURL.value){
+      entries.splice(i, 1);
+    }
+  }
+  modal.classList.add('hidden');
+  page1.classList.remove('hidden');
+  page3.classList.add('hidden');
+  renderDOM();
 });
