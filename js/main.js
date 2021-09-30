@@ -32,10 +32,12 @@ entriesButton.addEventListener('click', function(event){
 function catPicture () {
   titleInput.value = '';
   notesInput.value = '';
+  document.querySelector('.lds-heart').classList.remove('hidden')
+  document.querySelector('.overlay').classList.remove('hidden')
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://cataas.com/cat?json=true');
+  xhr.open('GET', 'https://cataa.com/cat?json=true');
   xhr.reponseType = 'json';
-  xhr.addEventListener('load', function(){
+  xhr.addEventListener('load', function(event){
     var responseObj = JSON.parse(xhr.response);
     console.log(responseObj)
     console.log(xhr.status);
@@ -46,7 +48,15 @@ function catPicture () {
     page1.classList.add('hidden');
     page2.classList.remove('hidden');
     urlInput.value  = catURL;
+    document.querySelector('.lds-heart').classList.add('hidden')
+    document.querySelector('.overlay').classList.add('hidden')
   });
+  xhr.addEventListener('error', function(event) {
+    console.log('error occured')
+    document.querySelector('.error-message').classList.remove('hidden')
+    document.querySelector('.lds-heart').classList.add('hidden')
+    document.querySelector('.overlay').classList.add('hidden')
+  })
   xhr.send();
 }
 
