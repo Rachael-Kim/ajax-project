@@ -76,5 +76,7 @@ body {
   }
   .random-cat-image{
     margin: auto;
+    width: 100%;
+    height: auto;
   }
 }
